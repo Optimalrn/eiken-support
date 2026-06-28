@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eiken Support | AI英検Passシリーズ サポート</title>
+  <meta name="description" content="OptimaLrn AI英検Passシリーズの公式サポート。準2級・2級・準1級向けAI学習アプリのFAQ・お問い合わせ・App Storeリンク。">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #F97316;
+      --orange-dark: #EA580C;
+      --orange-light: #FFF7ED;
+      --black: #111827;
+      --gray: #4B5563;
+      --gray-light: #F9FAFB;
+      --white: #FFFFFF;
+      --border: #E5E7EB;
+      --green: #10B981;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(160deg, #FFF7ED 0%, #FFFFFF 60%, #FFF7ED 100%);
+      color: var(--black);
+      padding: 56px 24px 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .logo-wrap {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 24px;
+    }
+
+    .logo-wrap img {
+      height: 72px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(249,115,22,0.12);
+      color: var(--orange-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(249,115,22,0.3);
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 span { color: var(--orange); }
+
+    header .tagline {
+      font-size: 1rem;
+      color: var(--gray);
+      max-width: 480px;
+      margin: 0 auto 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: var(--white);
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-cta:hover { background: var(--orange-dark); }
+
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--gray);
+      padding: 14px 24px;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -1px;
+      transition: all 0.2s;
+    }
+
+    nav a.active {
+      color: var(--orange);
+      border-bottom-color: var(--orange);
+    }
+
+    nav a:hover:not(.active) {
+      color: var(--black);
+      background: var(--gray-light);
+    }
+
+    section { padding: 56px 24px; }
+
+    .section-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-title h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .stats {
+      background: var(--orange);
+      color: var(--white);
+      padding: 32px 24px;
+    }
+
+    .stats-grid {
+      max-width: 640px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stats-grid .value {
+      font-size: 1.75rem;
+      font-weight: 800;
+    }
+
+    .stats-grid .label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.85);
+      margin-top: 4px;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .app-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: box-shadow 0.2s;
+    }
+
+    .app-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      margin-bottom: 14px;
+      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .app-badge {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .app-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .app-card p {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 16px;
+      min-height: 3.2em;
+    }
+
+    .app-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--black);
+      color: var(--white);
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .app-link:hover { background: #374151; }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .feature-card {
+      background: var(--gray-light);
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid var(--border);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--orange);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+    }
+
+    .feature-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .faq-item .q {
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 0.93rem;
+    }
+
+    .faq-item .q::before { content: "Q. "; color: var(--orange); }
+
+    .faq-item .a {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .faq-item .a::before {
+      content: "A. ";
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .contact-box {
+      background: var(--orange-light);
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin-bottom: 16px;
+      color: var(--gray);
+      font-size: 0.93rem;
+    }
+
+    .contact-box a {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .contact-box a:hover { background: var(--orange-dark); }
+
+    .bg-gray { background: var(--gray-light); }
+
+    footer {
+      background: var(--black);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    footer img {
+      height: 32px;
+      width: auto;
+      opacity: 0.7;
+      margin-bottom: 12px;
+    }
+
+    footer a { color: rgba(255,255,255,0.85); text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .stats-grid { grid-template-columns: 1fr; gap: 16px; }
+      nav a { padding: 12px 16px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <img src="optimalrn-logo.png" alt="OptimaLrn">
+  </div>
+  <span class="badge">Eiken Support — 公式サポート</span>
+  <h1><span>AI厳選の問題</span>だけで、最短合格。</h1>
+  <p class="tagline">OptimaLrn AI英検Passシリーズの公式サポートページ。アプリのダウンロード・FAQ・お問い合わせはこちら。</p>
+  <a href="#apps" class="hero-cta">アプリを選ぶ ↓</a>
+</header>
+
+<nav>
+  <a href="support.html" class="active">サポート</a>
+  <a href="#apps">アプリ</a>
+  <a href="#faq">FAQ</a>
+  <a href="privacy.html">プライバシーポリシー</a>
+</nav>
+
+<div class="stats">
+  <div class="stats-grid">
+    <div>
+      <div class="value">4</div>
+      <div class="label">英検アプリ</div>
+    </div>
+    <div>
+      <div class="value">AI搭載</div>
+      <div class="label">弱点分析エンジン</div>
+    </div>
+    <div>
+      <div class="value">iOS</div>
+      <div class="label">App Store配信</div>
+    </div>
+  </div>
+</div>
+
+<section id="apps">
+  <div class="section-inner">
+    <div class="section-title">
+      <h2>アプリラインナップ</h2>
+      <p>目標の試験に合わせてお選びください</p>
+    </div>
+    <div class="apps-grid">
+      <div class="app-card">
+        <img class="app-icon" src="icon-eiken-p2.png" alt="AI英検準２級 Pass">
+        <span class="app-badge">配信中</span>
+        <h3>AI英検準２級 Pass</h3>
+        <p>頻出単語と文法を、AIが弱点だけ集中出題。高校在学レベルを最短で突破。</p>
+        <a class="app-link" href="https://apps.apple.com/jp/app/id6762229086" target="_blank" rel="noopener"> App Storeで入手</a>
+      </div>
+      <div class="app-card">
+        <img class="app-icon" src="icon-eiken-p2plus.png" alt="AI英検準２級プラス Pass">
+        <span class="app-badge">配信中</span>
+        <h3>AI英検準２級プラス Pass</h3>
+        <p>2級へつながる長文と語彙に、少しずつ慣れる。準2級合格者の次のステップ。</p>
+        <a class="app-link" href="https://apps.apple.com/jp/app/id6762537264" target="_blank" rel="noopener"> App Storeで入手</a>
+      </div>
+      <div class="app-card">
+        <img class="app-icon" src="icon-eiken-2.png" alt="AI英検２級 Pass">
+        <span class="app-badge">配信中</span>
+        <h3>AI英検２級 Pass</h3>
+        <p>過去問演習×AI分析で、弱点を最短ルートで攻略。大学入試・就活に直結。</p>
+        <a class="app-link" href="https://apps.apple.com/jp/app/id6761838561" target="_blank" rel="noopener"> App Storeで入手</a>
+      </div>
+      <div class="app-card">
+        <img class="app-icon" src="icon-eiken-p1.png" alt="AI英検準１級 Pass">
+        <span class="app-badge">配信中</span>
+        <h3>AI英検準１級 Pass</h3>
+        <p>難単語と長文読解を、AIで効率よく対策。語彙・長文・英作文まで網羅。</p>
+        <a class="app-link" href="https://apps.apple.com/jp/app/id6762535365" target="_blank" rel="noopener"> App Storeで入手</a>
+      </div>
+      <div class="app-card">
+        <img class="app-icon" src="icon-itpass.png" alt="AI ITPassport Pass">
+        <span class="app-badge">配信中</span>
+        <h3>AI ITPassport Pass</h3>
+        <p>ストラテジ・マネジメント・テクノロジ系の3分野をAIが効率よくカバー。</p>
+        <a class="app-link" href="https://apps.apple.com/jp/app/id6763835091" target="_blank" rel="noopener"> App Storeで入手</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray">
+  <div class="section-inner">
+    <div class="section-title">
+      <h2>なぜ OptimaLrn なのか</h2>
+      <p>普通の問題集アプリとは、ここが違います</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>AIが弱点を即特定</h3>
+        <p>解答ログをリアルタイム分析。苦手な単元だけを重点的に出題します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>最短ルートを提示</h3>
+        <p>目標・習熟度・残り時間から最適な学習順序を自動生成します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>スキマ時間に最適化</h3>
+        <p>5分でも30分でも、その日の空き時間に合わせた問題セットを即時生成。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>成長が数字で見える</h3>
+        <p>習熟度スコア・正答率・学習ストリークをダッシュボードで一覧。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="section-inner" style="max-width:720px">
+    <div class="section-title">
+      <h2>よくある質問</h2>
+    </div>
+    <div class="card">
+      <div class="faq-item">
+        <p class="q">どのデバイスで使えますか？</p>
+        <p class="a">iPhone / iPad に対応しています。App Storeからダウンロードいただけます。</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">各アプリは独立していますか？</p>
+        <p class="a">はい、各級ごとに独立したアプリです。目標の試験に合わせてお選びください。</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">問題数はどのくらいですか？</p>
+        <p class="a">各アプリとも数百問以上を収録。AIが学習履歴に基づき最適な問題を選んで出題します。</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">アプリが正常に動作しない場合は？</p>
+        <p class="a">アプリを一度終了して再起動をお試しください。改善しない場合は下記お問い合わせ先までご連絡ください。</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">データは端末外に送信されますか？</p>
+        <p class="a">学習履歴は端末内に保存されます。詳細は<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray">
+  <div class="section-inner" style="max-width:720px">
+    <div class="card" style="border-left:none">
+      <h2>お問い合わせ</h2>
+      <div class="contact-box">
+        <p>ご不明な点・不具合のご報告・ご要望は、OptimaLrn サポートまでお気軽にお問い合わせください。</p>
+        <a href="mailto:contact@optimalrn.com">contact@optimalrn.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="optimalrn-logo.png" alt="OptimaLrn">
+  <p>&copy; 2026 OptimaLrn &nbsp;|&nbsp; <a href="privacy.html">プライバシーポリシー</a></p>
+  <p style="margin-top:8px">努力を科学する — Powered by Claude AI</p>
+</footer>
+
+</body>
+</html>
