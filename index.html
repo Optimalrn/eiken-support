@@ -1,66 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>英検対策アプリ サポート</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.6; }
-    header { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 20px 24px; text-align: center; }
-    header h1 { font-size: 22px; font-weight: 700; color: #1d1d1f; }
-    header p { color: #666; font-size: 14px; margin-top: 4px; }
-    main { max-width: 680px; margin: 40px auto; padding: 0 20px; }
-    .card { background: #fff; border-radius: 16px; padding: 28px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-    h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
-    .faq-item { margin-bottom: 20px; }
-    .faq-item:last-child { margin-bottom: 0; }
-    .faq-item dt { font-weight: 600; margin-bottom: 6px; }
-    .faq-item dd { color: #444; font-size: 15px; }
-    .contact-link { display: inline-block; margin-top: 12px; background: #007aff; color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 50px; font-size: 15px; font-weight: 600; }
-    .contact-link:hover { background: #0066dd; }
-    footer { text-align: center; padding: 32px 20px; color: #888; font-size: 13px; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OptimaLrn｜AI英検Passシリーズ</title>
+  <link rel="icon" type="image/svg+xml" href="/eiken-support/favicon.svg" />
+  <script>
+    // SPA: restore path stored by 404.html
+    (function(){var r=sessionStorage.redirect;delete sessionStorage.redirect;if(r&&r!==location.href)history.replaceState(null,null,r);})();
+    // Root redirect → OptimaLrn landing page
+    if(location.pathname==='/eiken-support/'||location.pathname==='/eiken-support'){location.replace('/eiken-support/optimalrn');}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="/eiken-support/assets/index-tJorFdyb.js"></script>
+  <link rel="modulepreload" crossorigin href="/eiken-support/assets/vendor-D_Bh0f0x.js">
+  <link rel="modulepreload" crossorigin href="/eiken-support/assets/ui-B6VFu3Un.js">
+  <link rel="stylesheet" crossorigin href="/eiken-support/assets/index-BLdn96o7.css">
 </head>
-<body>
-<header>
-  <h1>英検対策アプリ サポート</h1>
-  <p>OptimaLrn</p>
-</header>
-<main>
-  <div class="card">
-    <h2>よくある質問</h2>
-    <dl>
-      <div class="faq-item">
-        <dt>Q. アプリが起動しない / クラッシュする</dt>
-        <dd>アプリを一度完全に終了し、再起動してください。改善しない場合は、アプリを削除して再インストールをお試しください。</dd>
-      </div>
-      <div class="faq-item">
-        <dt>Q. ログインできない</dt>
-        <dd>Apple IDまたはメールアドレスで再度サインインをお試しください。パスワードをお忘れの場合はサインイン画面の「パスワードを忘れた方」からリセットできます。</dd>
-      </div>
-      <div class="faq-item">
-        <dt>Q. AI添削・AI直前対策が動かない</dt>
-        <dd>AI機能はインターネット接続が必要です。通信環境をご確認のうえ、再度お試しください。</dd>
-      </div>
-      <div class="faq-item">
-        <dt>Q. 課金・プレミアムプランについて</dt>
-        <dd>プレミアムプランはアプリ内のペイウォール画面からご購入いただけます。購入履歴の復元は「購入を復元」ボタンからお試しください。</dd>
-      </div>
-      <div class="faq-item">
-        <dt>Q. 学習データが消えた</dt>
-        <dd>データはアカウントに紐づいて保存されます。同じアカウントでログインし直すとデータが復元されます。</dd>
-      </div>
-    </dl>
-  </div>
-  <div class="card">
-    <h2>お問い合わせ</h2>
-    <p>上記で解決しない場合は、以下よりお問い合わせください。通常2〜3営業日以内にご返信いたします。</p>
-    <a class="contact-link" href="mailto:support@optimalrn.app">メールで問い合わせる</a>
-  </div>
-</main>
-<footer>
-  © 2026 OptimaLrn. All rights reserved.
-</footer>
+<body class="bg-gray-50">
+  <div id="root"></div>
 </body>
 </html>
