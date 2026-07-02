@@ -3,146 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プライバシーポリシー — 英検対策アプリ</title>
+  <title>プライバシーポリシー | Eiken Support</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.7; }
-    header { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 20px 24px; text-align: center; }
-    header h1 { font-size: 22px; font-weight: 700; color: #1d1d1f; }
-    header p { color: #666; font-size: 14px; margin-top: 4px; }
-    main { max-width: 680px; margin: 40px auto; padding: 0 20px 60px; }
-    .card { background: #fff; border-radius: 16px; padding: 28px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-    h2 { font-size: 17px; font-weight: 700; margin-bottom: 12px; border-left: 3px solid #007aff; padding-left: 10px; }
-    p { color: #333; font-size: 15px; margin-bottom: 12px; }
-    p:last-child { margin-bottom: 0; }
-    ul { padding-left: 20px; margin-bottom: 12px; }
-    ul li { color: #333; font-size: 15px; margin-bottom: 6px; }
-    table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 12px; }
-    th { background: #f5f5f7; text-align: left; padding: 10px 12px; font-weight: 600; border: 1px solid #e0e0e0; }
-    td { padding: 10px 12px; border: 1px solid #e0e0e0; color: #333; vertical-align: top; }
-    .meta { font-size: 13px; color: #888; text-align: right; margin-bottom: 24px; }
-    footer { text-align: center; padding: 32px 20px; color: #888; font-size: 13px; }
-    a { color: #007aff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #F97316;
+      --orange-dark: #EA580C;
+      --orange-light: #FFF7ED;
+      --black: #111827;
+      --gray: #4B5563;
+      --gray-light: #F9FAFB;
+      --white: #FFFFFF;
+      --border: #E5E7EB;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: var(--gray-light);
+      color: var(--black);
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
+      color: var(--white);
+      padding: 40px 24px 36px;
+      text-align: center;
+    }
+
+    .logo-wrap img {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+      mix-blend-mode: screen;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+    }
+
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--gray);
+      padding: 14px 24px;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -1px;
+      transition: all 0.2s;
+    }
+
+    nav a.active {
+      color: var(--orange);
+      border-bottom-color: var(--orange);
+    }
+
+    nav a:hover:not(.active) {
+      color: var(--black);
+      background: var(--gray-light);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 24px 60px;
+    }
+
+    .updated {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--orange);
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .card p {
+      color: var(--gray);
+      font-size: 0.93rem;
+      margin-bottom: 10px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .card ul {
+      margin: 12px 0 12px 1.2em;
+      color: var(--gray);
+      font-size: 0.93rem;
+    }
+
+    .card li { margin-bottom: 6px; }
+
+    .highlight-box {
+      background: var(--orange-light);
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-top: 12px;
+    }
+
+    footer {
+      background: var(--black);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    footer img {
+      height: 28px;
+      opacity: 0.7;
+      margin-bottom: 12px;
+    }
+
+    footer a { color: rgba(255,255,255,0.85); text-decoration: underline; }
   </style>
 </head>
 <body>
+
 <header>
-  <h1>プライバシーポリシー</h1>
-  <p>OptimaLrn — 英検対策アプリ</p>
+  <div class="logo-wrap">
+    <img src="optimalrn-logo.png" alt="OptimaLrn">
+  </div>
+  <h1>Eiken Support</h1>
+  <p>プライバシーポリシー</p>
 </header>
+
+<nav>
+  <a href="support.html">サポート</a>
+  <a href="privacy.html" class="active">プライバシーポリシー</a>
+</nav>
+
 <main>
-  <p class="meta">最終更新日：2026年4月25日</p>
+
+  <p class="updated">最終更新日：2026年6月28日</p>
 
   <div class="card">
-    <h2>はじめに</h2>
-    <p>OptimaLrn（以下「当社」）は、英検対策アプリシリーズ（英検2級・準2級・準2級プラス・3級・4級・5級対策アプリ、以下「本アプリ」）の提供にあたり、ユーザーのプライバシーを尊重し、個人情報を適切に取り扱うことを重要な責務と考えています。本ポリシーは、当社がどのような情報を収集し、どのように利用・保護するかを説明します。</p>
+    <h2>基本方針</h2>
+    <p>OptimaLrn（以下「当社」）は、AI英検Passシリーズ（以下「本アプリ群」）の運営において、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。</p>
+    <p>本アプリ群は学習支援を目的として提供されており、広告配信・個人情報の第三者販売は行っておりません。</p>
+  </div>
+
+  <div class="card">
+    <h2>対象アプリ</h2>
+    <p>本プライバシーポリシーは、以下のアプリに適用されます。</p>
+    <ul>
+      <li>AI英検準２級 Pass</li>
+      <li>AI英検準２級プラス Pass</li>
+      <li>AI英検２級 Pass</li>
+      <li>AI英検準１級 Pass</li>
+    </ul>
   </div>
 
   <div class="card">
     <h2>収集する情報</h2>
-    <p>当社は以下の情報を収集することがあります。</p>
-    <table>
-      <thead>
-        <tr><th>情報の種類</th><th>具体例</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>アカウント情報</td>
-          <td>メールアドレス、Apple ID（Sign in with Apple）、表示名</td>
-        </tr>
-        <tr>
-          <td>学習データ</td>
-          <td>回答履歴、正答率、学習時間、AI添削の入力・出力内容</td>
-        </tr>
-        <tr>
-          <td>購入情報</td>
-          <td>プレミアムプランの購入・有効状態（決済情報は Apple が管理し当社は取得しません）</td>
-        </tr>
-        <tr>
-          <td>端末・利用情報</td>
-          <td>OS バージョン、アプリバージョン、クラッシュログ、利用状況の統計データ</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="card">
-    <h2>情報の利用目的</h2>
-    <p>収集した情報は以下の目的に限り利用します。</p>
+    <p>本アプリ群は、学習機能の提供に必要な以下の情報を端末内に保存します。個人を特定できる情報（氏名・メールアドレス等）は収集しません。</p>
     <ul>
-      <li>本アプリのサービス提供・機能改善</li>
-      <li>学習履歴の保存・同期および学習状況の分析</li>
-      <li>AI 機能（添削・弱点分析等）の処理</li>
-      <li>プレミアムプランの管理</li>
-      <li>不正利用の検知・防止</li>
-      <li>ユーザーサポートへの対応</li>
+      <li>問題の解答履歴・正答率</li>
+      <li>学習進捗・習熟度スコア</li>
+      <li>学習ストリーク（連続学習日数）</li>
+      <li>アプリ内設定（通知・表示設定等）</li>
     </ul>
+    <div class="highlight-box">
+      学習データは原則として端末内にのみ保存され、当社サーバーには送信されません。
+    </div>
   </div>
 
   <div class="card">
-    <h2>第三者サービスへの情報提供</h2>
-    <p>当社は以下の第三者サービスを利用しています。各サービスのプライバシーポリシーもあわせてご確認ください。</p>
-    <table>
-      <thead>
-        <tr><th>サービス</th><th>用途</th><th>提供元</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Firebase</td>
-          <td>認証・データベース・クラッシュ分析</td>
-          <td>Google LLC</td>
-        </tr>
-        <tr>
-          <td>RevenueCat</td>
-          <td>アプリ内課金・サブスクリプション管理</td>
-          <td>RevenueCat, Inc.</td>
-        </tr>
-        <tr>
-          <td>OpenAI / Anthropic API</td>
-          <td>AI添削・AI直前対策機能の処理</td>
-          <td>OpenAI, L.L.C. / Anthropic, PBC</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>当社は法令に基づく場合を除き、上記以外の第三者にユーザーの個人情報を販売・開示しません。</p>
+    <h2>AI機能について</h2>
+    <p>本アプリ群は、弱点分析・問題選定のためにAI技術を利用しています。AI処理に必要な学習データ（匿名化された解答パターン）は端末内で処理されるか、必要最小限の情報のみがAIサービスプロバイダに送信されます。</p>
+    <p>個人を特定できる情報はAI処理に使用しません。</p>
   </div>
 
   <div class="card">
-    <h2>データの保存と保護</h2>
-    <p>学習データおよびアカウント情報は、Google Cloud（Firebase）上のサーバーに保存されます。当社はデータへの不正アクセスを防ぐために適切な技術的・組織的措置を講じていますが、インターネットを通じた送受信に完全な安全性を保証することはできません。</p>
-    <p>アカウントを削除すると、当社のサーバーに保存された個人情報・学習データは削除されます。削除はアプリ内の設定画面またはサポートへのメールでご依頼いただけます。</p>
-  </div>
-
-  <div class="card">
-    <h2>子どものプライバシー</h2>
-    <p>本アプリは13歳未満のお子様を対象としたサービスではありません。13歳未満のユーザーが親権者の同意なくアカウントを作成していることが判明した場合、当社は速やかに該当アカウントのデータを削除します。</p>
-  </div>
-
-  <div class="card">
-    <h2>ユーザーの権利</h2>
-    <p>ユーザーは以下の権利を有します。</p>
+    <h2>第三者サービス</h2>
+    <p>本アプリ群が利用する主な第三者サービスは以下の通りです。</p>
     <ul>
-      <li>保有する個人データの開示・訂正の請求</li>
-      <li>個人データの削除の請求（アカウント削除を含む）</li>
-      <li>マーケティング目的の処理への異議申し立て</li>
+      <li>Apple App Store（アプリ配信）：<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple プライバシーポリシー</a></li>
     </ul>
-    <p>これらの請求は <a href="mailto:support@optimalrn.app">support@optimalrn.app</a> までお送りください。</p>
+    <p>アプリ内課金・サブスクリプションを利用する場合、決済情報はAppleが管理します。当社はクレジットカード情報等を直接取得しません。</p>
   </div>
 
   <div class="card">
-    <h2>ポリシーの変更</h2>
-    <p>当社は本ポリシーを変更することがあります。重要な変更を行う場合はアプリ内通知等でお知らせします。変更後のポリシーは本ページへの掲載をもって効力を生じます。</p>
+    <h2>お子様のプライバシー</h2>
+    <p>本アプリ群は英検受験者（主に小中学生〜高校生）の学習支援を目的としています。13歳未満の方が使用する場合は、保護者の方の同意・監督のもとでご利用ください。</p>
+    <p>13歳未満の方から意図的に個人を特定できる情報を収集することはありません。</p>
+  </div>
+
+  <div class="card">
+    <h2>プライバシーポリシーの変更</h2>
+    <p>本ポリシーは必要に応じて改訂されることがあります。重要な変更がある場合はこのページでお知らせします。最新の内容は常にこのページをご確認ください。</p>
   </div>
 
   <div class="card">
     <h2>お問い合わせ</h2>
-    <p>プライバシーに関するご質問・ご要望は以下までご連絡ください。</p>
-    <p><a href="mailto:support@optimalrn.app">support@optimalrn.app</a></p>
+    <p>本プライバシーポリシーに関するご質問は、下記よりお問い合わせください。</p>
+    <p><strong>OptimaLrn サポート</strong><br>
+    メール：<a href="mailto:contact@optimalrn.com">contact@optimalrn.com</a></p>
   </div>
+
 </main>
+
 <footer>
-  © 2026 OptimaLrn. All rights reserved.
+  <img src="optimalrn-logo.png" alt="OptimaLrn">
+  <p>&copy; 2026 OptimaLrn &nbsp;|&nbsp; <a href="support.html">サポート</a></p>
 </footer>
+
 </body>
 </html>
