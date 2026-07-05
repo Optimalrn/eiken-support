@@ -366,22 +366,82 @@
 
     .bg-gray { background: var(--gray-light); }
 
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gray);
+      margin-bottom: 6px;
+    }
+
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--black);
+      background: var(--white);
+      appearance: none;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--orange);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 13px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover { background: var(--orange-dark); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .form-result {
+      margin-top: 12px;
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
     footer {
-      background: var(--black);
+      background: linear-gradient(160deg, #FFF7ED 0%, #FFFFFF 60%, #FFF7ED 100%);
+      border-top: 1px solid var(--border);
       text-align: center;
       padding: 32px 24px;
       font-size: 0.8rem;
-      color: rgba(255,255,255,0.6);
+      color: var(--gray);
     }
 
     footer img {
       height: 32px;
       width: auto;
-      opacity: 0.7;
       margin-bottom: 12px;
     }
 
-    footer a { color: rgba(255,255,255,0.85); text-decoration: underline; }
+    footer a { color: var(--orange-dark); text-decoration: underline; }
 
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -534,23 +594,69 @@
 
 <section class="bg-gray">
   <div class="section-inner" style="max-width:720px">
-    <div class="card" style="border-left:none; margin-bottom:20px">
-      <h2>作ってほしいアプリはありますか？</h2>
-      <p style="font-size:0.9rem; color:var(--gray); margin-bottom:16px">「この資格・試験のAI学習アプリが欲しい」というご要望をお聞かせください。リクエストが多いものから順に開発を検討します。</p>
-      <div class="contact-box">
-        <p>試験名・ジャンル・どんな機能が欲しいかを添えてメッセージを送ってください。</p>
-        <a href="mailto:contact@optimalrn.com?subject=アプリリクエスト&body=希望する試験・資格：%0A%0Aあったら便利な機能：">アプリをリクエストする</a>
-      </div>
-    </div>
     <div class="card" style="border-left:none">
-      <h2>お問い合わせ</h2>
-      <div class="contact-box">
-        <p>ご不明な点・不具合のご報告・ご要望は、OptimaLrn サポートまでお気軽にお問い合わせください。</p>
-        <a href="mailto:contact@optimalrn.com">contact@optimalrn.com</a>
-      </div>
+      <h2>お問い合わせ・アプリリクエスト</h2>
+      <p style="font-size:0.9rem; color:var(--gray); margin-bottom:20px">不具合・ご質問・「このアプリが欲しい」というリクエストはこちらから。</p>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="form-type">種別</label>
+          <select id="form-type" name="種別">
+            <option value="お問い合わせ">お問い合わせ</option>
+            <option value="アプリリクエスト">アプリリクエスト</option>
+            <option value="不具合報告">不具合報告</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="form-message">メッセージ</label>
+          <textarea id="form-message" name="メッセージ" placeholder="内容をご記入ください" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">送信する</button>
+        <p class="form-result" id="form-result"></p>
+      </form>
     </div>
   </div>
 </section>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.form-submit');
+  const result = document.getElementById('form-result');
+  const type = document.getElementById('form-type').value;
+  btn.disabled = true;
+  btn.textContent = '送信中...';
+  result.textContent = '';
+
+  const data = {
+    種別: type,
+    メッセージ: document.getElementById('form-message').value,
+    _subject: '[OptimaLrn] ' + type,
+    _template: 'table',
+    _captcha: 'false',
+  };
+
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/daiki.koba.4biz@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (res.ok) {
+      result.textContent = '送信しました。ありがとうございます！';
+      result.style.color = 'var(--green)';
+      this.reset();
+    } else {
+      throw new Error();
+    }
+  } catch {
+    result.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+    result.style.color = '#EF4444';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '送信する';
+  }
+});
+</script>
 
 <footer>
   <img src="optimalrn-logo.png" alt="OptimaLrn">
