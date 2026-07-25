@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eiken Support | AI英検Passシリーズ サポート</title>
-  <meta name="description" content="OptimaLrn AI英検Passシリーズの公式サポート。準2級・2級・準1級向けAI学習アプリのFAQ・お問い合わせ・App Storeリンク。">
+  <title>OptimaLrn App Support | AI学習アプリ公式サポート</title>
+  <meta name="description" content="OptimaLrnが提供するAI英検Passシリーズ、AI ITPassport Pass、Koyomiの公式サポート。アプリ一覧、FAQ、お問い合わせをご案内します。">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -18,6 +18,7 @@
       --white: #FFFFFF;
       --border: #E5E7EB;
       --green: #10B981;
+      --blue: #254A7C;
     }
 
     body {
@@ -28,7 +29,10 @@
     }
 
     header {
-      background: linear-gradient(160deg, #FFF7ED 0%, #FFFFFF 60%, #FFF7ED 100%);
+      background:
+        radial-gradient(circle at 16% 16%, rgba(249,115,22,0.13), transparent 34%),
+        radial-gradient(circle at 86% 82%, rgba(37,74,124,0.13), transparent 34%),
+        linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 52%, #EEF4FF 100%);
       color: var(--black);
       padding: 56px 24px 64px;
       text-align: center;
@@ -45,7 +49,7 @@
       transform: translate(-50%, -50%);
       width: 600px;
       height: 400px;
-      background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(249,115,22,0.06) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -229,6 +233,8 @@
       margin-bottom: 10px;
     }
 
+    .app-badge.coming-soon { background: var(--blue); }
+
     .app-card h3 {
       font-size: 0.95rem;
       font-weight: 700;
@@ -258,6 +264,12 @@
     }
 
     .app-link:hover { background: #374151; }
+
+    .app-link.disabled {
+      background: #E5E7EB;
+      color: #4B5563;
+      cursor: default;
+    }
 
     .features-grid {
       display: grid;
@@ -455,28 +467,29 @@
   <div class="logo-wrap">
     <img src="optimalrn-logo.png" alt="OptimaLrn">
   </div>
-  <span class="badge">Eiken Support — 公式サポート</span>
-  <h1><span>AI厳選の問題</span>だけで、最短合格。</h1>
-  <p class="tagline">OptimaLrn AI英検Passシリーズの公式サポートページ。アプリのダウンロード・FAQ・お問い合わせはこちら。</p>
-  <a href="#apps" class="hero-cta">アプリを選ぶ ↓</a>
+  <span class="badge">OptimaLrn App Support — 公式サポート</span>
+  <h1>学びを、<span>AIでもっと身近に。</span></h1>
+  <p class="tagline">英語資格、ITパスポート、歴史。目標や興味に合わせて選べるOptimaLrnのAI学習アプリをご案内します。</p>
+  <a href="#apps" class="hero-cta">学習アプリを見る ↓</a>
 </header>
 
 <nav>
   <a href="support.html" class="active">サポート</a>
   <a href="#apps">アプリ</a>
   <a href="#faq">FAQ</a>
+  <a href="#terms">利用規約</a>
   <a href="privacy.html">プライバシーポリシー</a>
 </nav>
 
 <div class="stats">
   <div class="stats-grid">
     <div>
-      <div class="value">5</div>
+      <div class="value">6</div>
       <div class="label">学習アプリ</div>
     </div>
     <div>
-      <div class="value">AI搭載</div>
-      <div class="label">弱点分析エンジン</div>
+      <div class="value">3分野</div>
+      <div class="label">英語・IT・歴史</div>
     </div>
     <div>
       <div class="value">iOS</div>
@@ -489,7 +502,7 @@
   <div class="section-inner">
     <div class="section-title">
       <h2>アプリラインナップ</h2>
-      <p>目標の試験に合わせてお選びください</p>
+      <p>資格試験から教養まで、学びたいテーマに合わせてお選びください</p>
     </div>
     <div class="apps-grid">
       <div class="app-card">
@@ -527,6 +540,13 @@
         <p>ストラテジ・マネジメント・テクノロジ系の3分野をAIが効率よくカバー。</p>
         <a class="app-link" href="https://apps.apple.com/jp/app/id6763835091" target="_blank" rel="noopener"> App Storeで入手</a>
       </div>
+      <div class="app-card">
+        <img class="app-icon" src="icon-koyomi.png" alt="Koyomi">
+        <span class="app-badge coming-soon">リリース準備中</span>
+        <h3>Koyomi</h3>
+        <p>日本史・世界史を年表とクイズでつなげて理解。基礎から難関私大対策まで段階的に学習。</p>
+        <span class="app-link disabled" aria-disabled="true">App Store公開準備中</span>
+      </div>
     </div>
   </div>
 </section>
@@ -535,28 +555,28 @@
   <div class="section-inner">
     <div class="section-title">
       <h2>なぜ OptimaLrn なのか</h2>
-      <p>普通の問題集アプリとは、ここが違います</p>
+      <p>分野が変わっても、一人ひとりの「続けられる学び」を設計します</p>
     </div>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">📈</div>
-        <h3>AIが弱点を即特定</h3>
-        <p>解答ログをリアルタイム分析。苦手な単元だけを重点的に出題します。</p>
+        <h3>理解度に合わせて学べる</h3>
+        <p>解答履歴や進捗から、今の自分に必要な問題と復習を見つけやすくします。</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🎯</div>
-        <h3>最短ルートを提示</h3>
-        <p>目標・習熟度・残り時間から最適な学習順序を自動生成します。</p>
+        <h3>目標までの道筋を整理</h3>
+        <p>試験日、習熟度、学びたいテーマに応じて、次に取り組む内容を整理します。</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">⚡</div>
-        <h3>スキマ時間に最適化</h3>
-        <p>5分でも30分でも、その日の空き時間に合わせた問題セットを即時生成。</p>
+        <h3>短時間でも続けやすい</h3>
+        <p>クイズ、復習、年表など、日々のスキマ時間で取り組める学習体験を提供します。</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📊</div>
-        <h3>成長が数字で見える</h3>
-        <p>習熟度スコア・正答率・学習ストリークをダッシュボードで一覧。</p>
+        <h3>学びの積み重ねが見える</h3>
+        <p>正答率、学習履歴、復習状況などを通じて、できるようになったことを確認できます。</p>
       </div>
     </div>
   </div>
@@ -574,11 +594,11 @@
       </div>
       <div class="faq-item">
         <p class="q">各アプリは独立していますか？</p>
-        <p class="a">はい、各級ごとに独立したアプリです。目標の試験に合わせてお選びください。</p>
+        <p class="a">はい。英検の各級、ITパスポート、Koyomiはそれぞれ独立したアプリです。学びたい資格やテーマに合わせてお選びください。</p>
       </div>
       <div class="faq-item">
-        <p class="q">問題数はどのくらいですか？</p>
-        <p class="a">各アプリとも数百問以上を収録。AIが学習履歴に基づき最適な問題を選んで出題します。</p>
+        <p class="q">どのような学習ができますか？</p>
+        <p class="a">アプリにより、問題演習、弱点復習、AI添削、学習計画、年表学習などを利用できます。詳しい機能や収録内容は各アプリのApp Storeページをご確認ください。</p>
       </div>
       <div class="faq-item">
         <p class="q">アプリが正常に動作しない場合は？</p>
@@ -586,8 +606,81 @@
       </div>
       <div class="faq-item">
         <p class="q">データは端末外に送信されますか？</p>
-        <p class="a">学習履歴は端末内に保存されます。詳細は<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
+        <p class="a">端末内に保存される情報に加え、アカウント同期、AI機能、掲示板、購入確認などに必要な情報が外部サービスへ送信される場合があります。アプリごとの詳細は<a href="privacy.html">共通プライバシーポリシー</a>をご確認ください。</p>
       </div>
+      <div class="faq-item">
+        <p class="q">サブスクリプション（Koyomi Plus等）の解約方法は？</p>
+        <p class="a">iPhoneの「設定」→ 最上部のご自身の名前 →「サブスクリプション」から、対象のプランを選び「サブスクリプションをキャンセル」で解約できます。現在の期間終了までは引き続きご利用いただけます。</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">無料体験だけで解約すると料金はかかりますか？</p>
+        <p class="a">無料体験の有無、終了日、更新条件は利用者ごとに異なる場合があります。購入前のApp Store確認画面と、iPhoneのサブスクリプション管理画面に表示される内容をご確認ください。</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">購入したプランを機種変更後も引き継げますか？</p>
+        <p class="a">同じApple IDでサインインし、アプリ内の「購入を復元」から引き継げます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="terms">
+  <div class="section-inner" style="max-width:780px">
+    <div class="section-title">
+      <h2>利用規約</h2>
+      <p>制定・最終更新日：2026年7月25日</p>
+    </div>
+
+    <div class="card">
+      <h2>1. 適用範囲</h2>
+      <p style="font-size:0.9rem;color:var(--gray)">本規約は、OptimaLrn（以下「当社」）が提供するAI英検Passシリーズ、AI ITPassport Pass、Koyomiその他の当社学習アプリおよび関連サービス（以下「本サービス」）の利用条件を定めるものです。利用者は、本サービスを利用することで本規約に同意したものとみなされます。</p>
+    </div>
+
+    <div class="card">
+      <h2>2. 利用許諾</h2>
+      <p style="font-size:0.9rem;color:var(--gray)">当社は利用者に対し、本規約およびApple社の「エンドユーザー使用許諾契約（標準EULA）」に従い、本サービスを非独占的・譲渡不能の条件で利用する権利を許諾します。利用者は、本サービスを法令および公序良俗に反しない範囲で私的利用の目的にのみ使用できます。</p>
+    </div>
+
+    <div class="card">
+      <h2>3. 料金・サブスクリプション</h2>
+      <p style="font-size:0.9rem;color:var(--gray)">一部のアプリでは、追加機能を利用するための有料プラン（例：Koyomi Plus）を自動更新サブスクリプションとして提供します。</p>
+      <ul style="font-size:0.9rem;color:var(--gray);margin:10px 0 0 1.25em">
+        <li>料金・期間・無料体験の有無は、購入前にApp Storeの購入確認画面に表示される内容が正となります。</li>
+        <li>サブスクリプションは、App Storeの購入確認画面に表示される条件に従って自動更新されます。</li>
+        <li>解約は、iPhoneの「設定」からApple Accountの「サブスクリプション」を開き、App Storeに表示される更新時期までに行ってください。解約後も当該期間の終了までは有料機能をご利用いただけます。</li>
+        <li>無料体験が付帯する場合、その適用条件、期間、体験終了後の価格はApp Storeの確認画面に表示される内容が正となります。</li>
+        <li>決済はApple社が処理し、当社が利用者のクレジットカード情報等を直接取得することはありません。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. 禁止事項</h2>
+      <p style="font-size:0.9rem;color:var(--gray)">利用者は、本サービスの複製・改変・リバースエンジニアリング、不正アクセス、他者の権利侵害、および本サービスの運営を妨げる行為を行ってはなりません。</p>
+    </div>
+
+    <div class="card">
+      <h2>5. 学習内容・AI生成物に関する免責</h2>
+      <p style="font-size:0.9rem;color:var(--gray)">本サービスが提供する問題、解説、歴史情報およびAIが生成する回答には、誤りや不正確な内容が含まれる可能性があります。当社はその完全性・正確性・特定目的への適合性を保証しません。試験対策等の重要な判断にあたっては、公式教材や試験実施機関等の情報も併せてご確認ください。</p>
+    </div>
+
+    <div class="card">
+      <h2>6. 知的財産権</h2>
+      <p style="font-size:0.9rem;color:var(--gray)">本サービスおよびそれに含まれるコンテンツ、商標、ロゴに関する知的財産権は、当社または正当な権利者に帰属します。</p>
+    </div>
+
+    <div class="card">
+      <h2>7. 規約の変更</h2>
+      <p style="font-size:0.9rem;color:var(--gray)">当社は、必要に応じて本規約を変更することがあります。重要な変更がある場合は、アプリ内または本ページでお知らせします。</p>
+    </div>
+
+    <div class="card">
+      <h2>8. 準拠法・管轄</h2>
+      <p style="font-size:0.9rem;color:var(--gray)">本規約は日本法に準拠し、本サービスに関して当社と利用者の間に紛争が生じた場合は、当社所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+    </div>
+
+    <div class="card">
+      <h2>9. お問い合わせ</h2>
+      <p style="font-size:0.9rem;color:var(--gray)">本規約に関するお問い合わせは、対象アプリ名を添えて <a href="mailto:contact@optimalrn.com" style="color:var(--orange-dark);font-weight:700">contact@optimalrn.com</a> までご連絡ください。</p>
     </div>
   </div>
 </section>
@@ -596,8 +689,20 @@
   <div class="section-inner" style="max-width:720px">
     <div class="card" style="border-left:none">
       <h2>お問い合わせ・アプリリクエスト</h2>
-      <p style="font-size:0.9rem; color:var(--gray); margin-bottom:20px">不具合・ご質問・「このアプリが欲しい」というリクエストはこちらから。</p>
+      <p style="font-size:0.9rem; color:var(--gray); margin-bottom:20px">各アプリの不具合・ご質問・改善要望・新しい学習アプリのリクエストはこちらから。</p>
       <form id="contact-form">
+        <div class="form-group">
+          <label for="form-app">対象アプリ</label>
+          <select id="form-app" name="対象アプリ">
+            <option value="共通・その他">共通・その他</option>
+            <option value="AI英検準2級 Pass">AI英検準2級 Pass</option>
+            <option value="AI英検準2級プラス Pass">AI英検準2級プラス Pass</option>
+            <option value="AI英検2級 Pass">AI英検2級 Pass</option>
+            <option value="AI英検準1級 Pass">AI英検準1級 Pass</option>
+            <option value="AI ITPassport Pass">AI ITPassport Pass</option>
+            <option value="Koyomi">Koyomi</option>
+          </select>
+        </div>
         <div class="form-group">
           <label for="form-type">種別</label>
           <select id="form-type" name="種別">
@@ -623,14 +728,16 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   const btn = this.querySelector('.form-submit');
   const result = document.getElementById('form-result');
   const type = document.getElementById('form-type').value;
+  const app = document.getElementById('form-app').value;
   btn.disabled = true;
   btn.textContent = '送信中...';
   result.textContent = '';
 
   const data = {
     種別: type,
+    対象アプリ: app,
     メッセージ: document.getElementById('form-message').value,
-    _subject: '[OptimaLrn] ' + type,
+    _subject: '[OptimaLrn / ' + app + '] ' + type,
     _template: 'table',
     _captcha: 'false',
   };
@@ -660,8 +767,8 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 
 <footer>
   <img src="optimalrn-logo.png" alt="OptimaLrn">
-  <p>&copy; 2026 OptimaLrn &nbsp;|&nbsp; <a href="privacy.html">プライバシーポリシー</a></p>
-  <p style="margin-top:8px">努力を科学する — Powered by Claude AI</p>
+  <p>&copy; 2026 OptimaLrn &nbsp;|&nbsp; <a href="#terms">利用規約</a> &nbsp;|&nbsp; <a href="privacy.html">プライバシーポリシー</a></p>
+  <p style="margin-top:8px">努力を科学する — AIで、一人ひとりの学びを前へ。</p>
 </footer>
 
 </body>
