@@ -3,149 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プライバシーポリシー | Eiken Support</title>
+  <meta name="description" content="OptimaLrnが提供するAI英検Passシリーズ、AI ITPassport Pass、Koyomiに共通するプライバシーポリシーです。">
+  <title>プライバシーポリシー | OptimaLrn App Support</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --orange: #F97316;
-      --orange-dark: #EA580C;
-      --orange-light: #FFF7ED;
-      --black: #111827;
+      --orange-dark: #C94F08;
+      --orange-light: #FFF3E8;
+      --navy: #14213D;
+      --blue: #254A7C;
       --gray: #4B5563;
-      --gray-light: #F9FAFB;
+      --gray-light: #F7F8FC;
       --white: #FFFFFF;
-      --border: #E5E7EB;
+      --border: #E2E6EF;
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
       background: var(--gray-light);
-      color: var(--black);
+      color: var(--navy);
       line-height: 1.8;
     }
 
     header {
-      background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
-      color: var(--white);
-      padding: 40px 24px 36px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(249, 115, 22, 0.16), transparent 34%),
+        radial-gradient(circle at 88% 80%, rgba(37, 74, 124, 0.14), transparent 32%),
+        linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 52%, #EEF4FF 100%);
+      color: var(--navy);
+      padding: 38px 24px 34px;
       text-align: center;
+      border-top: 5px solid var(--orange);
+    }
+
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 86px;
+      padding: 10px 22px;
+      margin-bottom: 18px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(37, 74, 124, 0.12);
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(20, 33, 61, 0.10);
     }
 
     .logo-wrap img {
-      height: 56px;
+      display: block;
+      height: 66px;
       width: auto;
+      max-width: min(320px, 76vw);
       object-fit: contain;
-      mix-blend-mode: screen;
-      margin-bottom: 16px;
     }
 
     header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 6px;
+      font-size: clamp(1.55rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 5px;
     }
 
-    header p {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.75);
+    header > p {
+      color: var(--blue);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .app-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .app-pills span {
+      padding: 5px 12px;
+      color: var(--blue);
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(37, 74, 124, 0.14);
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
     }
 
     nav {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
       display: flex;
       justify-content: center;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 18px rgba(20, 33, 61, 0.05);
+      backdrop-filter: blur(12px);
     }
 
     nav a {
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--gray);
       padding: 14px 24px;
-      border-bottom: 3px solid transparent;
       margin-bottom: -1px;
-      transition: all 0.2s;
+      color: var(--gray);
+      border-bottom: 3px solid transparent;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s, background 0.2s;
     }
 
     nav a.active {
-      color: var(--orange);
+      color: var(--orange-dark);
       border-bottom-color: var(--orange);
     }
 
     nav a:hover:not(.active) {
-      color: var(--black);
+      color: var(--navy);
       background: var(--gray-light);
     }
 
     main {
-      max-width: 720px;
+      max-width: 780px;
       margin: 40px auto;
       padding: 0 24px 60px;
     }
 
     .updated {
-      font-size: 0.85rem;
       color: var(--gray);
+      font-size: 0.85rem;
       margin-bottom: 24px;
     }
 
     .card {
-      background: var(--white);
-      border-radius: 12px;
       padding: 28px 32px;
       margin-bottom: 20px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      background: var(--white);
+      border: 1px solid rgba(226, 230, 239, 0.9);
       border-left: 4px solid var(--orange);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(20, 33, 61, 0.055);
     }
 
     .card h2 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    .card h3 {
+      margin: 18px 0 6px;
+      color: var(--blue);
+      font-size: 0.96rem;
     }
 
     .card p {
-      color: var(--gray);
-      font-size: 0.93rem;
       margin-bottom: 10px;
+      color: var(--gray);
+      font-size: 0.92rem;
     }
 
     .card p:last-child { margin-bottom: 0; }
 
     .card ul {
-      margin: 12px 0 12px 1.2em;
+      margin: 10px 0 12px 1.25em;
       color: var(--gray);
-      font-size: 0.93rem;
+      font-size: 0.92rem;
     }
 
-    .card li { margin-bottom: 6px; }
+    .card li { margin-bottom: 7px; }
+
+    .card a {
+      color: var(--orange-dark);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
 
     .highlight-box {
-      background: var(--orange-light);
-      border-radius: 8px;
-      padding: 16px;
-      font-size: 0.9rem;
+      padding: 17px 18px;
+      margin-top: 14px;
       color: var(--gray);
-      margin-top: 12px;
+      background: linear-gradient(135deg, var(--orange-light), #FFFDF9);
+      border: 1px solid #FED7AA;
+      border-radius: 10px;
+      font-size: 0.88rem;
     }
 
     footer {
-      background: linear-gradient(160deg, #FFF7ED 0%, #FFFFFF 60%, #FFF7ED 100%);
+      padding: 30px 24px;
+      color: var(--gray);
+      background: linear-gradient(160deg, #FFF7ED 0%, #FFFFFF 60%, #EEF4FF 100%);
       border-top: 1px solid var(--border);
       text-align: center;
-      padding: 28px 24px;
       font-size: 0.8rem;
-      color: var(--gray);
     }
 
     footer img {
-      height: 28px;
-      margin-bottom: 12px;
+      display: block;
+      height: 34px;
+      width: auto;
+      margin: 0 auto 12px;
     }
 
     footer a { color: var(--orange-dark); text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      header { padding: 28px 16px 26px; }
+      .logo-wrap { min-height: 70px; padding: 8px 16px; border-radius: 16px; }
+      .logo-wrap img { height: 52px; }
+      nav a { padding: 12px 14px; font-size: 0.78rem; }
+      main { margin-top: 28px; padding: 0 16px 44px; }
+      .card { padding: 22px 20px; }
+    }
   </style>
 </head>
 <body>
@@ -154,83 +226,154 @@
   <div class="logo-wrap">
     <img src="optimalrn-logo.png" alt="OptimaLrn">
   </div>
-  <h1>Eiken Support</h1>
-  <p>プライバシーポリシー</p>
+  <h1>OptimaLrn App Support</h1>
+  <p>共通プライバシーポリシー</p>
+  <div class="app-pills" aria-label="対象アプリ">
+    <span>AI英検Passシリーズ</span>
+    <span>AI ITPassport Pass</span>
+    <span>Koyomi</span>
+  </div>
 </header>
 
-<nav>
+<nav aria-label="サポートナビゲーション">
   <a href="support.html">サポート</a>
-  <a href="privacy.html" class="active">プライバシーポリシー</a>
+  <a href="privacy.html" class="active" aria-current="page">プライバシーポリシー</a>
 </nav>
 
 <main>
+  <p class="updated">制定・最終更新日：2026年7月25日</p>
 
-  <p class="updated">最終更新日：2026年6月28日</p>
+  <section class="card">
+    <h2>1. 基本方針</h2>
+    <p>OptimaLrn（以下「当社」）は、当社が提供する学習支援アプリ（以下「対象アプリ」）において、利用者のプライバシーを尊重し、取得する情報を本ポリシーに従って適切に取り扱います。</p>
+    <p>対象アプリは広告目的で個人情報を販売せず、他社のアプリやWebサイトを横断する広告トラッキングを行いません。</p>
+  </section>
 
-  <div class="card">
-    <h2>基本方針</h2>
-    <p>OptimaLrn（以下「当社」）は、AI英検Passシリーズ（以下「本アプリ群」）の運営において、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。</p>
-    <p>本アプリ群は学習支援を目的として提供されており、広告配信・個人情報の第三者販売は行っておりません。</p>
-  </div>
-
-  <div class="card">
-    <h2>対象アプリ</h2>
-    <p>本プライバシーポリシーは、以下のアプリに適用されます。</p>
+  <section class="card">
+    <h2>2. 対象アプリ</h2>
+    <p>本ポリシーは、次のアプリおよびこれらの後継版に適用されます。</p>
     <ul>
-      <li>AI英検準２級 Pass</li>
-      <li>AI英検準２級プラス Pass</li>
-      <li>AI英検２級 Pass</li>
-      <li>AI英検準１級 Pass</li>
+      <li>AI英検準2級 Pass</li>
+      <li>AI英検準2級プラス Pass</li>
+      <li>AI英検2級 Pass</li>
+      <li>AI英検準1級 Pass</li>
+      <li>AI ITPassport Pass（ITパスポート対策AI）</li>
+      <li>Koyomi（日本史・世界史学習アプリ）</li>
     </ul>
-  </div>
+    <p>アプリごとに搭載機能が異なるため、以下の記載は、その機能を実際に利用する場合に限って適用されます。</p>
+  </section>
 
-  <div class="card">
-    <h2>収集する情報</h2>
-    <p>本アプリ群は、学習機能の提供に必要な以下の情報を端末内に保存します。個人を特定できる情報（氏名・メールアドレス等）は収集しません。</p>
+  <section class="card">
+    <h2>3. 取得・保存する情報</h2>
+
+    <h3>端末内の学習・設定情報</h3>
     <ul>
-      <li>問題の解答履歴・正答率</li>
-      <li>学習進捗・習熟度スコア</li>
-      <li>学習ストリーク（連続学習日数）</li>
-      <li>アプリ内設定（通知・表示設定等）</li>
+      <li>問題の解答履歴、正誤、正答率、苦手分野、復習予定</li>
+      <li>学習時間、習熟度、連続学習日数、ブックマーク</li>
+      <li>試験予定日、学習目標、職種など利用者が設定した学習条件</li>
+      <li>通知、表示、オンボーディングなどのアプリ設定</li>
     </ul>
+
+    <h3>アカウント・クラウド同期情報</h3>
+    <p>アカウント機能を搭載するAI英検Passシリーズでは、Firebase Authenticationを利用し、ユーザーID、認証方法、メールアドレス、表示名など認証サービスから提供される情報を処理する場合があります。また、学習進捗、利用状況、復習情報などをFirebase上に保存し、端末間同期や機能提供に利用します。</p>
+
+    <h3>利用者が送信する内容</h3>
+    <ul>
+      <li>AI添削・AI質問・AI問題生成などへ入力した文章や質問</li>
+      <li>コミュニティや掲示板へ投稿した表示名、タイトル、本文、リアクション</li>
+      <li>お問い合わせ、改善要望、問題データの修正報告</li>
+    </ul>
+    <p>コミュニティや掲示板への投稿は他の利用者に公開されます。氏名、住所、連絡先、学校名など、個人を特定できる情報や機微な情報を投稿しないでください。</p>
+
+    <h3>購入・技術情報</h3>
+    <ul>
+      <li>商品ID、購入状態、購入・復元に必要な取引情報</li>
+      <li>アプリバージョン、OS・端末の種類、匿名識別子</li>
+      <li>通信日時、IPアドレス、障害・セキュリティ対応に必要なログ</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>4. アプリごとの主な取扱い</h2>
+
+    <h3>AI英検Passシリーズ</h3>
+    <p>サインイン、学習進捗の同期、AI添削・問題生成、コミュニティ、購入状態の確認等のため、Apple、GoogleおよびFirebaseのサービスを利用します。AI機能では、利用者が入力した英文・質問と、回答生成に必要な学習情報がGoogleのAIサービスへ送信される場合があります。</p>
+
+    <h3>AI ITPassport Pass</h3>
+    <p>学習履歴や設定は主に端末内へ保存します。AI機能を利用すると、入力した質問、解答記録、苦手分野など回答生成に必要な情報がFirebase AI Logicを通じてGoogleのGeminiへ送信されます。掲示板を利用すると、表示名、投稿内容、匿名の端末識別子およびリアクション情報がFirebaseへ送信・保存されます。</p>
+
+    <h3>Koyomi</h3>
+    <p>オンボーディング、クイズ履歴、ブックマーク、復習予定、表示設定は原則として端末内へ保存します。歴史教材データの取得にはFirebase Firestoreを利用します。Koyomi Plusの購入状態確認にはApple App StoreとRevenueCatを利用します。Koyomiにはアカウント機能および利用者による歴史イベント投稿機能はありません。</p>
+
     <div class="highlight-box">
-      学習データは原則として端末内にのみ保存され、当社サーバーには送信されません。
+      AI機能へ氏名・メールアドレス等を意図的に送信することはありません。ただし、利用者自身が入力欄へ個人情報を記載した場合は送信対象となるため、個人情報や機密情報を入力しないでください。
     </div>
-  </div>
+  </section>
 
-  <div class="card">
-    <h2>AI機能について</h2>
-    <p>本アプリ群は、弱点分析・問題選定のためにAI技術を利用しています。AI処理に必要な学習データ（匿名化された解答パターン）は端末内で処理されるか、必要最小限の情報のみがAIサービスプロバイダに送信されます。</p>
-    <p>個人を特定できる情報はAI処理に使用しません。</p>
-  </div>
-
-  <div class="card">
-    <h2>第三者サービス</h2>
-    <p>本アプリ群が利用する主な第三者サービスは以下の通りです。</p>
+  <section class="card">
+    <h2>5. 利用目的</h2>
     <ul>
-      <li>Apple App Store（アプリ配信）：<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple プライバシーポリシー</a></li>
+      <li>問題出題、弱点分析、復習、進捗管理など学習機能の提供</li>
+      <li>サインイン、データ同期、購入状態確認および購入復元</li>
+      <li>AIによる問題生成、添削、質問回答および学習提案</li>
+      <li>コミュニティ・掲示板機能の提供と不正利用防止</li>
+      <li>障害調査、セキュリティ確保、品質改善およびお問い合わせ対応</li>
+      <li>法令、Appleの審査要件および各サービスの利用規約への対応</li>
     </ul>
-    <p>アプリ内課金・サブスクリプションを利用する場合、決済情報はAppleが管理します。当社はクレジットカード情報等を直接取得しません。</p>
-  </div>
+  </section>
 
-  <div class="card">
-    <h2>お子様のプライバシー</h2>
-    <p>本アプリ群は英検受験者（主に小中学生〜高校生）の学習支援を目的としています。13歳未満の方が使用する場合は、保護者の方の同意・監督のもとでご利用ください。</p>
-    <p>13歳未満の方から意図的に個人を特定できる情報を収集することはありません。</p>
-  </div>
+  <section class="card">
+    <h2>6. AI機能</h2>
+    <p>AI機能では、入力内容および回答生成に必要な学習情報をGoogleのGeminiまたはFirebase AI Logicへ送信する場合があります。送信された情報は、各サービス提供者の規約・プライバシーポリシーに従って処理されます。</p>
+    <p>AIが生成する回答には誤りが含まれる可能性があります。重要な判断では、公式の教材、試験実施機関および専門家の情報も確認してください。</p>
+  </section>
 
-  <div class="card">
-    <h2>プライバシーポリシーの変更</h2>
-    <p>本ポリシーは必要に応じて改訂されることがあります。重要な変更がある場合はこのページでお知らせします。最新の内容は常にこのページをご確認ください。</p>
-  </div>
+  <section class="card">
+    <h2>7. 外部サービス</h2>
+    <p>対象アプリでは、搭載機能に応じて次の外部サービスを利用します。</p>
+    <ul>
+      <li><a href="https://www.apple.com/jp/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple</a>：アプリ配信、Appleでサインイン、アプリ内課金</li>
+      <li><a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Google</a>：Googleログイン、Gemini、Firebase</li>
+      <li><a href="https://firebase.google.com/support/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Google Firebase</a>：認証、データ保存、AI機能、アプリ機能の提供</li>
+      <li><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">RevenueCat</a>：Koyomi Plusの購入状態管理</li>
+    </ul>
+    <p>決済はAppleが処理し、当社がクレジットカード番号などの決済手段を直接取得することはありません。</p>
+  </section>
 
-  <div class="card">
-    <h2>お問い合わせ</h2>
-    <p>本プライバシーポリシーに関するご質問は、下記よりお問い合わせください。</p>
+  <section class="card">
+    <h2>8. 第三者提供・広告</h2>
+    <p>当社は、法令に基づく場合を除き、利用者情報を本人の同意なく第三者へ販売しません。機能提供に必要な範囲で外部サービスへ情報を送信する場合は、本ポリシーおよび各サービスのポリシーに従って取り扱います。</p>
+    <p>対象アプリは第三者広告を表示せず、広告目的のトラッキングを行いません。</p>
+  </section>
+
+  <section class="card">
+    <h2>9. 保存期間・削除</h2>
+    <p>端末内のデータは、アプリ内のデータ削除機能またはアプリの削除により消去できます。クラウドに保存したアカウント・学習情報は、対応アプリのアカウント削除機能またはお問い合わせにより削除を依頼できます。</p>
+    <p>公開済みのコミュニティ・掲示板投稿、購入記録、セキュリティログ等は、不正防止、法令対応、取引確認等に必要な期間保存する場合があります。削除を希望する投稿がある場合は、対象アプリ、投稿内容、投稿日時等を添えてお問い合わせください。</p>
+  </section>
+
+  <section class="card">
+    <h2>10. お子様のプライバシー</h2>
+    <p>13歳未満の方が対象アプリを利用する場合は、保護者の同意・監督のもとでご利用ください。当社は、13歳未満の方から個人を特定できる情報を意図的に収集しません。</p>
+  </section>
+
+  <section class="card">
+    <h2>11. 安全管理</h2>
+    <p>当社は、取得した情報への不正アクセス、漏えい、改ざん、滅失等を防ぐため、アクセス制御、通信の暗号化、必要最小限のデータ利用など合理的な安全管理措置を講じます。</p>
+  </section>
+
+  <section class="card">
+    <h2>12. 本ポリシーの変更</h2>
+    <p>機能、外部サービスまたは法令の変更に応じて、本ポリシーを改定する場合があります。重要な変更がある場合は、アプリ内または本ページでお知らせします。</p>
+  </section>
+
+  <section class="card">
+    <h2>13. お問い合わせ</h2>
+    <p>本ポリシー、アカウント・投稿データの削除、その他のプライバシーに関するお問い合わせは、対象アプリ名を添えてご連絡ください。</p>
     <p><strong>OptimaLrn サポート</strong><br>
-    メール：<a href="mailto:contact@optimalrn.com">contact@optimalrn.com</a></p>
-  </div>
-
+      メール：<a href="mailto:contact@optimalrn.com">contact@optimalrn.com</a>
+    </p>
+  </section>
 </main>
 
 <footer>
